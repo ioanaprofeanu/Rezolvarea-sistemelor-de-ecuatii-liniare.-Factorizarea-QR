@@ -1,0 +1,132 @@
+# Profeanu Ioana, 323CA
+# README Tema 1 Analiza Algoritmilor - Etapa 2
+# Rezolvarea sistemelor de ecuatii liniare - Gram-Schmidt - Givens - Householder
+-------------------------------------------------------------------------------
+* Implementarea Algoritmilor *
+   ~ GramSchmidt.m - implementarea algoritmului Gram-Schmidt si Gram-Schmidt
+   modificat
+   	- am implementat varianta modificata a algoritmului pentru matrice pa-
+   	tratice deoarece varianta originala prezenta erori mari de calcul 
+   	pe matrice cu n > 50 linii/coloane
+   	- pentru matricele nepatratice, se va utiliza algoritmul original
+   ~ Givens.m - implementarea algoritmului Givens utilizand matricea de rotatie
+   ~ Householder.m - implementarea algoritmului Householder utilizand reflec-
+   torii Householder
+      ** Pentru fiecare algoritm, afisam in consola timpul de executie pentru
+      factorizarea QR, pentru aflarea solutiei sistemului si timpul total **
+   ~ SST.m - calculul solutiei sistemului utilizand backward substitution
+   ~ read_data.m - citirea datelor din fisierul "test.in"
+   ~ print_data.m - afisarea solutiei in fisierul "test.out"
+   
+   ~ Makefile : contine regula de build pentru cei trei algoritmi:
+   	- run-best : rularea algoritmului Householder
+   	- run-p1 : rularea algoritmului Givens
+   	- run-p2 : rularea algoritmului Gram-Schmidt
+   	** Makefile-ul executa algoritmii utilizand Octave; pentru rularea fo-
+	losind Matlab, a se inlocui "octave" cu "matlab" in regulile de run **
+   ~ Rulare checker: python3 checker.py --algo ALGORITM --task 10, unde
+   		    ALGORITM = [best, p1, p2]
+   	- solutiile generate de algoritmi in urma fiecarui test sunt comparate
+   	cu solutia testului aferent din folderul ./out
+   	
+   ~ Surse algoritmi:
+	- https://github.com/radusqrt/numerical-methods/tree/master/matlab/qr
+    	- https://github.com/radusqrt/numerical-methods/blob/master/matlab/ad-
+    	hoc/SST.m
+    	- https://ocw.cs.pub.ro/courses/_media/mn/laboratoare/lab_mn_03.pdf
+-------------------------------------------------------------------------------
+* Descrierea testelor si observatii *
+~ Pentru fiecare caz, s-au generat atat teste cu matrice dense, cat si cu ma-
+trice sparse care au diagonala principala diferita de 0:
+ ~ Sistem patratic:
+  - Testele [1-4]:
+  	- n = m < 10: toti algoritmii au trecut testele
+  - Testele [5-12]:
+  	- n = m < 50: toti algoritmii au trecut testele, exceptand:
+  	  ! algoritmul Gram-Schmidt esueaza testul 12, cu matrice sparse
+  - Testele [13-20]:
+  	- n = m < 100: toti algoritmii au trecut aproape toate testele
+  	  ! algoritmii Householder si Gram-Schmidt esueaza testul 20, cu matri-
+  	  ce sparse => Givens este cel mai eficient pe matrice sparse
+  - Testele [21-28]:
+  	- n = m < 150: toti algoritmii au trecut toate testele, exceptand:
+  	  ! algoritmul Gram-Schmidt esueaza testele 26 si 27, cu matrice sparse
+  	  - se observa timpul crescut de executie al algoritmului Givens
+  	  odata cu cresterea dimensiunii matricei A 
+  - Testele [29-34]:
+  	- n = m < 200: toti algoritmii au trecut toate testele, exceptand:
+  	  ! algoritmul Gram-Schmidt esueaza toate testele cu matrice sparse
+  	  => ineficienta algoritmului Gram-Schmidt pentru matrice sparse de di-
+  	  mensiuni mari
+  	  - caracter si mai proeminent al ineficientei temporale a algoritmului
+  	  Givens pe matrice dense de dimensiuni mari
+ ~ Sistem supradimensionat - m > n:
+  - Testele [35-38]: doar algoritmul Gram-Schmidt functioneaza partial
+  	- algoritmii Givens si Householder esueaza deoarece matricea R nu este
+  	superior triunghiulara
+  	- Gram-Schmidt functioneaza pentru testele mici, pentru cele cu n > 20
+  	esueaza deoarece matricea R nu este superior triunghiulara
+ ~ Sistem subdimensionat - m < n:
+  - Testele [39-40]: doar algoritmii Givens si Householder genereaza solutii
+  	- solutiile nu sunt insa corecte, generandu-se m solutii in loc de n
+  	(se genereaza mai putine solutii)
+ ~ Sistem nedeterminat:
+  - Testele [41-43]: algoritmii functioneaza partial
+  	- pentru n > 10, algoritmii esueaza din cauza aproximarii solutiilor
+ ~ Sistem incompatibil:
+  - Testul [44]: niciun algoritm nu genereaza o solutie, programele oprindu-se
+  din cauza erorii de impartire la 0
+ ~ Matricea A este densa si elementele diagonalei principale sunt 0:
+  - Testele [45-47]: algoritmii Givens si Gram-Schmidt trec testele
+  	- algoritmul Householder esueaza, matricea R nefiind superior
+  	triunghiulara;
+-------------------------------------------------------------------------------
+* Generarea testelor si output-urilor *
+ ~ DenseMatrixGenerator.c , SparseMatrixGenerator.c :
+   ~ Pentru generarea testelor, am utilizat doua programe in C pentru generarea
+   unor matrice random de dimensiune m x n atat dense, cat si sparse
+   - output-ul acestor programe este stocat in folderul ./in si contin pe prima
+   linie dimensiunea matricei A, matricea A si vectorul coloana b
+ ~ Matlabsolver.m
+   ~ Testele au fost rezolvate implementand functia "MatlabSolver", care utili-
+   zeaza functia preimplementata din Matlab "linsolve" pentru rezolvarea unui
+   sistem de ecuatii liniare
+   - output-urile acestei functii sunt stocate in folderul ./out si sunt folo-
+   site drept referinta in testarea corectitudinii algoritmilor analizati
+ ~ Programele auxiliare se afla in folderul ./Utils
+-------------------------------------------------------------------------------
+* Concluzii *
+   ~ Best: Householder
+   	- 12 teste cu output-ul gresit
+   	- cea mai buna eficienta din punctul de vedere al timpului de executie
+   	atat pentru matrice dense, cat si pentru matrice sparse
+   	- 1/34 teste esuate pentru sistem patratic - a esuat pe un singur test
+   	cu matrice sparse
+   	- matricea R nu este generata corect in cazul matricelor cu elementele
+   	de pe diagonala principala egale cu 0
+   	- overall, cel mai bun algoritm din punctul de vedere al stabilitatii
+   	numerice si al timpului de executie
+   ~ P1: Givens
+   	- 8 teste cu output-ul gresit
+   	- niciun test esuat pentru sistem patratic
+   	- foarte ineficient din punctul de vedere al timpului de executie pen-
+   	tru matrice dense cu multe elemente, dar si pe cele sparse
+   	- cel mai stabil numeric pentru matrice sparse
+   ~ P2: Gram-Schmidt:
+   	- 13 teste cu output-ul gresit
+   	- 7/17 teste esuate pentru matrice sparse => cel mai instabil numeric
+   	pentru matrice rare; caracter proeminent mai ales pe matrice de di-
+   	mensiuni mari
+   	- timpi de executie medii
+   	- functioneaza pentru sistemele supradimensionate, insa numai pentru
+   	matrice de dimensiuni mici 
+   	
+  ~ Alte observatii:
+    - Pentru Householder si Givens:
+   	- matricea R nu este generata corect in cazul sistemelor supradimensio-
+   	nate
+   	- nu se genereaza suficiente solutii pentru sistemele subdimensionate
+   - Pentru toti algoritmii:
+   	- nu functioneaza pentru sisteme incompatibile (eroare impartire la 0)
+------------------------------------------------------------------------------- 
+

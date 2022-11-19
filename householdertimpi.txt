@@ -1,0 +1,238 @@
+octave Householder.m
+QR_computing_time =  0.012462
+X_computing_time =  0.0014260
+Total execution time:
+Total_time =  0.013888
+octave Householder.m
+QR_computing_time =  0.00074983
+X_computing_time =  0.00056887
+Total execution time:
+Total_time =  0.0013187
+octave Householder.m
+QR_computing_time =  0.00068784
+The matrix A is not upper triangular!
+X_computing_time =  0.00059080
+Total execution time:
+Total_time =  0.0012786
+octave Householder.m
+QR_computing_time =  0.00053096
+X_computing_time =  0.00051117
+Total execution time:
+Total_time =  0.0010421
+octave Householder.m
+QR_computing_time =  0.20968
+X_computing_time =  0.0032589
+Total execution time:
+Total_time =  0.21293
+octave Householder.m
+QR_computing_time =  0.00040793
+X_computing_time =  0.00039196
+Total execution time:
+Total_time =  0.00079989
+octave Householder.m
+QR_computing_time =  0.00081706
+X_computing_time =  0.00062299
+Total execution time:
+Total_time =  0.0014400
+octave Householder.m
+QR_computing_time =  0.00072908
+Incompatible size!
+X_computing_time =  0.00040817
+Total execution time:
+Total_time =  0.0011373
+octave Householder.m
+QR_computing_time =  0.0075309
+X_computing_time =  0.0011852
+Total execution time:
+Total_time =  0.0087161
+octave Householder.m
+QR_computing_time =  0.00039101
+Incompatible size!
+X_computing_time =  0.00075579
+Total execution time:
+Total_time =  0.0011468
+octave Householder.m
+QR_computing_time =  0.0012090
+The matrix A is not upper triangular!
+X_computing_time =  0.00046802
+Total execution time:
+Total_time =  0.0016770
+octave Householder.m
+QR_computing_time =  0.10327
+X_computing_time =  0.0024590
+Total execution time:
+Total_time =  0.10573
+octave Householder.m
+QR_computing_time =  0.047327
+X_computing_time =  0.0018330
+Total execution time:
+Total_time =  0.049160
+octave Householder.m
+QR_computing_time =  0.00046110
+X_computing_time =  0.00040293
+Total execution time:
+Total_time =  0.00086403
+octave Householder.m
+QR_computing_time =  0.010351
+X_computing_time =  0.0013220
+Total execution time:
+Total_time =  0.011673
+octave Householder.m
+QR_computing_time =  0.00051594
+X_computing_time =  0.0028112
+Total execution time:
+Total_time =  0.0033271
+octave Householder.m
+QR_computing_time =  0.0020471
+X_computing_time =  0.00084901
+Total execution time:
+Total_time =  0.0028961
+octave Householder.m
+QR_computing_time =  0.0016060
+X_computing_time =  0.00074196
+Total execution time:
+Total_time =  0.0023479
+octave Householder.m
+QR_computing_time =  0.0040448
+X_computing_time =  0.0010550
+Total execution time:
+Total_time =  0.0050998
+octave Householder.m
+QR_computing_time =  0.019301
+The matrix A is not upper triangular!
+X_computing_time =  0.00040793
+Total execution time:
+Total_time =  0.019709
+octave Householder.m
+QR_computing_time =  0.042823
+X_computing_time =  0.0017309
+Total execution time:
+Total_time =  0.044554
+octave Householder.m
+QR_computing_time =  0.00048590
+X_computing_time =  0.00051498
+Total execution time:
+Total_time =  0.0010009
+octave Householder.m
+QR_computing_time =  0.00055289
+X_computing_time =  0.00049496
+Total execution time:
+Total_time =  0.0010478
+octave Householder.m
+QR_computing_time =  0.0013881
+X_computing_time =  0.00072789
+Total execution time:
+Total_time =  0.0021160
+octave Householder.m
+QR_computing_time =  0.013717
+X_computing_time =  0.0017390
+Total execution time:
+Total_time =  0.015456
+octave Householder.m
+QR_computing_time =  0.089422
+X_computing_time =  0.0026150
+Total execution time:
+Total_time =  0.092037
+octave Householder.m
+QR_computing_time =  0.071102
+X_computing_time =  0.0023890
+Total execution time:
+Total_time =  0.073491
+octave Householder.m
+QR_computing_time =  0.14863
+X_computing_time =  0.0027692
+Total execution time:
+Total_time =  0.15140
+octave Householder.m
+QR_computing_time =  0.0076940
+X_computing_time =  0.0013270
+Total execution time:
+Total_time =  0.0090210
+octave Householder.m
+QR_computing_time =  0.052583
+X_computing_time =  0.0021091
+Total execution time:
+Total_time =  0.054692
+octave Householder.m
+QR_computing_time =  0.25016
+X_computing_time =  0.0033240
+Total execution time:
+Total_time =  0.25348
+octave Householder.m
+QR_computing_time =  0.00090289
+X_computing_time =  0.00069880
+Total execution time:
+Total_time =  0.0016017
+octave Householder.m
+QR_computing_time =  0.010023
+X_computing_time =  0.0012090
+Total execution time:
+Total_time =  0.011232
+octave Householder.m
+octave Householder.m
+QR_computing_time =  0.075615
+X_computing_time =  0.0023971
+Total execution time:
+Total_time =  0.078012
+octave Householder.m
+QR_computing_time =  0.14401
+X_computing_time =  0.0027919
+Total execution time:
+Total_time =  0.14680
+octave Householder.m
+QR_computing_time =  0.058571
+X_computing_time =  0.0022600
+Total execution time:
+Total_time =  0.060831
+octave Householder.m
+QR_computing_time =  0.27010
+X_computing_time =  0.0034580
+Total execution time:
+Total_time =  0.27356
+octave Householder.m
+QR_computing_time =  0.0021341
+X_computing_time =  0.0010331
+Total execution time:
+Total_time =  0.0031672
+octave Householder.m
+QR_computing_time =  0.0036099
+X_computing_time =  0.0011671
+Total execution time:
+Total_time =  0.0047770
+octave Householder.m
+QR_computing_time =  0.029945
+X_computing_time =  0.0015531
+Total execution time:
+Total_time =  0.031498
+octave Householder.m
+QR_computing_time =  0.0011210
+The matrix A is not upper triangular!
+X_computing_time =  0.00040102
+Total execution time:
+Total_time =  0.0015221
+octave Householder.m
+QR_computing_time =  0.00058794
+X_computing_time =  0.00070810
+Total execution time:
+Total_time =  0.0012960
+octave Householder.m
+QR_computing_time =  0.00081110
+X_computing_time =  0.00072908
+Total execution time:
+Total_time =  0.0015402
+octave Householder.m
+QR_computing_time =  0.00043607
+X_computing_time =  0.0010390
+Total execution time:
+Total_time =  0.0014751
+octave Householder.m
+QR_computing_time =  0.22174
+X_computing_time =  0.0036640
+Total execution time:
+Total_time =  0.22541
+octave Householder.m
+QR_computing_time =  0.0041571
+Incompatible size!
+X_computing_time =  0.00057411
+Total execution time:
+Total_time =  0.0047312
